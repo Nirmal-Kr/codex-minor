@@ -11,6 +11,7 @@ A python script that can be used to customise the grub menu in linux. It can cha
 **Install Dependencies**
 
 $ pip3 install requests
+$ pip install beautifulsoup4
 
 ## Clone the source
 ____________________
