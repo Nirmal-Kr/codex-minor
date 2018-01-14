@@ -21,3 +21,6 @@ ________________
 go to the location where the file is stored and the type
 
 $ python3 grub_changer.py
+
+
+update 1: Added a while loop to get a image always (earlier sometimes it was writing html (utf-8) on a jpg file
