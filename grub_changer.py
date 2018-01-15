@@ -8,13 +8,17 @@ def link_creation():
 	soup=BeautifulSoup(r.content,"lxml")
 	mylinks=soup.find_all("a",class_="preview")
 	i=len(mylinks)
-	rand_i=random.randrange(0,i)
+	if(i==0):
+		print("The tag you entered is not present")
+		return(0)
+	else:
+		rand_i=random.randrange(0,i)
 
-	l=mylinks[rand_i].get("href")
-	id=l[37:43]
-	fst='https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-'
-	url = fst+id+'.jpg'
-	return(url)
+		l=mylinks[rand_i].get("href")
+		id=l[37:43]
+		fst='https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-'
+		url = fst+id+'.jpg'
+		return(url)
 def fetching_image(url):
 	r = requests.get(url)
 	with open('/home/ashispadhi/Downloads/cat.jpg', 'wb') as f:  
@@ -27,7 +31,8 @@ def fetching_image(url):
 	
 
 fetch_url=link_creation()
-fetching_image(fetch_url)
+if(fetch_url!=0):
+	fetching_image(fetch_url)
 
 
 
