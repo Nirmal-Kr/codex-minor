@@ -21,7 +21,7 @@ def link_creation():
 		return(url)
 def fetching_image(url):
 	r = requests.get(url)
-	with open('/home/ashispadhi/Downloads/cat.jpg', 'wb') as f:  
+	with open('/home/ashispadhi/Downloads/grub.jpg', 'wb') as f:  
 		f.write(r.content)
 
 	 #Retrieve HTTP meta-data
