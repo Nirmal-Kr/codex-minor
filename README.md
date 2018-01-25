@@ -12,7 +12,7 @@ A python script that can be used to customise the grub menu in linux. It can cha
 
 $ pip3 install requests
 
-$ pip install beautifulsoup4
+$ pip3 install bs4
 
 ## Clone the source
 ____________________
